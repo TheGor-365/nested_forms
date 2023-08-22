@@ -1,7 +1,7 @@
-class CreateProfiles < ActiveRecord::Migration[7.0]
+class CreateBooks < ActiveRecord::Migration[7.0]
   def change
-    create_table :profiles do |t|
-      t.text :description
+    create_table :books do |t|
+      t.string :title
       t.belongs_to :user, null: false, foreign_key: true, index: true
 
       t.timestamps
