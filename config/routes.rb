@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
+  resources :profiles
   root "users#index"
   
-  resources :profiles
   resources :users
 end

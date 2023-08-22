@@ -4,8 +4,8 @@
 
 <%= render @profile %>
 
-<div>
-<div class="btn-group my-5">
+<br>
+<div class="btn-group">
   <%= link_to "Edit this profile", edit_profile_path(@profile), class: "btn btn-sm btn-outline-warning" %>
   <%= link_to "Back to profiles", profiles_path, class: "btn btn-sm btn-outline-secondary" %>
   <%= button_to "Destroy this profile", @profile, method: :delete, class: "btn btn-sm btn-outline-danger" %>
