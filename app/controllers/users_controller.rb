@@ -16,10 +16,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    user_params.merge(profile_attributes: {
-      description: 'Welcome to profile'
-    })
-    @user = User.new(user_params)
+    @user = User.new(user_params.merge(profile_attributes: { description: 'Welcome to profile' }))
 
     respond_to do |format|
       if @user.save
