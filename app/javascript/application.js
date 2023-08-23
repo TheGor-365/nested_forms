@@ -2,6 +2,4 @@
 import "@hotwired/turbo-rails"
 import "./controllers"
 import * as bootstrap from "bootstrap"
-
-require("jquery")
-require("@nathanvda/cocoon")
+import "@nathanvda/cocoon"

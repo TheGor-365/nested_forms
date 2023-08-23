@@ -7,6 +7,16 @@
       <%= f.input :name %>
     </div>
 
+    <div id='books'>
+      <%= f.simple_fields_for :books do |book| %>
+        <%= render 'book_fields', f: book %>
+      <% end %>
+
+      <div class='links'>
+        <%= link_to_add_association 'Add book', f, :books, class: "btn btn-sm btn-outline-success mt-3" %>
+      </div>
+    </div>
+
     <div class="form-actions">
       <%= f.button :submit, class: "btn btn-sm btn-outline-success mt-3" %>
     </div>

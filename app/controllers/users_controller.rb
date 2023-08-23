@@ -16,6 +16,9 @@ class UsersController < ApplicationController
   end
 
   def create
+    user_params.merge(profile_attributes: {
+      description: 'Welcome to profile'
+    })
     @user = User.new(user_params)
 
     respond_to do |format|
@@ -52,6 +55,9 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:name)
+    params.require(:user).permit(
+      :name,
+      books_attributes: [:title]
+    )
   end
 end
